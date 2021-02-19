@@ -4,7 +4,7 @@ require('dotenv').config();
 import * as logger from 'koa-logger';
 
 import { app } from './app';
-import { stan } from './stan';
+import { stan } from './nats-streaming/stan';
 
 const port = process.env.PORT || 3000;
 
