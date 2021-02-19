@@ -1,5 +1,5 @@
 import { Context } from 'koa';
-import Ping from './db/mockdb';
+import { Ping } from './db/mockdb';
 
 export default class PingClass {
   static index(ctx: Context): void {
