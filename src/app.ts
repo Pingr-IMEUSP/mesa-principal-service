@@ -15,3 +15,4 @@ app.use(cors());
 app.use(router.routes()).use(router.allowedMethods());
 
 router.get('/pings', PingController.index);
+router.get('/users/:id/pings', PingController.show);
