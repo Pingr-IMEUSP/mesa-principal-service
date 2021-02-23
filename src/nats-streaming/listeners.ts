@@ -14,6 +14,7 @@ export function setupListeners(): void {
     const ping: PingInterface = JSON.parse(msg.getData() as string);
 
     Ping.all.push(ping);
+    Ping.count++;
     console.log('[PING_CREATED]:', ping);
   });
 
@@ -22,6 +23,7 @@ export function setupListeners(): void {
     const user: UserInterface = JSON.parse(msg.getData() as string);
 
     User.all.push(user);
+    User.count++;
     console.log('[USER_CREATED]:', user);
   });
 
@@ -29,6 +31,7 @@ export function setupListeners(): void {
     const keyword: KeywordInterface = JSON.parse(msg.getData() as string);
 
     Keyword.all.push(keyword);
+    Keyword.count++;
     console.log('[KEYWORD_CREATED]:', keyword);
   });
 }
